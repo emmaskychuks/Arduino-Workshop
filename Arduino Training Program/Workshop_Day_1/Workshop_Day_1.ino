@@ -5,6 +5,7 @@ Purpose: INtroduce students to the concept of Blink Led and push button
 
 
 int ledPin = 13;                // LED connected to digital pin 13
+int ledPin2 =7;
 int ledValue = LOW;             // previous value of the LED
 long ledStartTime = 0;          // will store last time LED was updated
 long ledBlinkInterval = 1000;   // interval at which to blink (milliseconds)
@@ -48,11 +49,13 @@ void loop()
               if (ledValue == LOW)//if LED is OFF
               {  ledValue = HIGH;
                 digitalWrite(ledPin, ledValue);// turn it ON.
+                digitalWrite(ledPin2, ledValue);
               }
               else// if LED is ON.
               {
                 ledValue = LOW;
                 digitalWrite(ledPin, ledValue); //Turn it OFF. 
+                digitalWrite(ledPin2, ledValue);
               }   
        }
 }
